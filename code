@@ -1,6 +1,5 @@
 x = 0
 y = 0
-duration= 0
 add_library("sound")
 
 def draw():
@@ -8,7 +7,6 @@ def draw():
     global y
     global duration
     
-    duration += 1.5
  
     y += 1.5
     if y >= 685:
