@@ -38,7 +38,7 @@ def draw():
    
     duration += 1.5
     
-    if duration >= 1150:
+    if duration >= 1350:
         exit()
 
 def setup():
