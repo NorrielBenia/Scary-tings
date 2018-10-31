@@ -1,5 +1,6 @@
 x = 0
 y = 0
+duration = 0
 add_library("sound")
 
 def draw():
@@ -26,7 +27,16 @@ def draw():
         x += 1
         image(img,x-300,height/6)
         sf.play()
-
+    
+    duration+=1.5
+    if duration >= 1050:
+    x = 0
+    y = 0
+    duration = 0
+    y += 1.5
+    x += 1.5
+    duration += 1.5
+    
 def setup():
     ellipse
     fullScreen()
