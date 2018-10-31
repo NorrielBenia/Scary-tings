@@ -1,14 +1,11 @@
 x = 0
 y = 0
-duration = 0
 add_library("sound")
 
 def draw():
     global x
     global y
-    global duration
     
- 
     y += 1.5
     if y >= 685:
         y = 9999
@@ -27,16 +24,7 @@ def draw():
         x += 1
         image(img,x-300,height/6)
         sf.play()
-    
-    duration+=1.5
-    if duration >= 1050:
-    x = 0
-    y = 0
-    duration = 0
-    y += 1.5
-    x += 1.5
-    duration += 1.5
-    
+
 def setup():
     ellipse
     fullScreen()
@@ -45,3 +33,6 @@ def setup():
     global sf
     size(200,200)
     sf = SoundFile(this, "Scary Jumpscare Sound Effect.wav")
+
+def mousePressed():
+    loop()
